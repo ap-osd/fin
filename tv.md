@@ -27,16 +27,16 @@ $\text{DCF}_{\infty} = CF \times \frac{\frac{1}{1 + r}}{\frac{r}{1 + r}} = CF \t
 
 Thus, the DCF for an infinite series of constant cash flows (or Present Value of Perpetuity) simplifies to:
 
-$\text{DCF}_{\infty} = \text{PV}_{\infty} = CF \times \frac{1}{r}$
+$`\text{DCF}_{\infty} = \text{PV}_{\infty} = CF \times \frac{1}{r}`$
 
 Assuming FCF=1.  
 Then:
 
-$\boxed{\text{DCF}_{\infty} = \text{PV}_{\infty} = \frac{1}{r}}$
+$`\boxed{\text{DCF}_{\infty} = \text{PV}_{\infty} = \frac{1}{r}}`$
 
 ## Using Perpetuity Growth Model (Gordon Growth Model)
 
-$\text{TV}_{\infty} = \frac{CF_{n} \times (1 + g)}{r - g}$
+$`\text{TV}_{\infty} = \frac{CF_{n} \times (1 + g)}{r - g}`$
 
 Where:  
  $CF_n$ = Cash Flow in the final forecasted year (e.g., Year n)  
@@ -53,14 +53,35 @@ $\text{TV}_{\infty} = \frac{1 \times (1 + 0)}{r - 0}$
 $\boxed{\text{TV}_{\infty} = \frac{1}{r}}$
 
 ## Example
-For $5$% discount rate, $r=0.05$, $\text{TV}_{\infty} = \frac{1}{0.05} \Rightarrow \boxed{\text{TV}_{\infty} = 20}$
+For $5$% discount rate, $r=0.05$, $`\text{TV}_{\infty} = \frac{1}{0.05} \Rightarrow \boxed{\text{TV}_{\infty} = 20}`$
 
-For $10$% discount rate, $r=0.1$, $\text{TV}_{\infty} = \frac{1}{0.1} \Rightarrow \boxed{\text{TV}_{\infty} = 10}$
+For $10$% discount rate, $r=0.1$, $`\text{TV}_{\infty} = \frac{1}{0.1} \Rightarrow \boxed{\text{TV}_{\infty} = 10}`$
 
 ![TV](tv.png "Terminal Value")
 
-``` python
-import tv
+# Appendix A
+## Geometric Series
+**Basis of generic geometric series:**
 
-tv.compute_tv()
-```
+$S = a + ar + ar^2 + ar^3 + \cdots + ar^{n-1}$
+
+Where:
+$a$ is the first term,
+$r$ is the common ratio,
+$n$ is the number of terms.
+
+**Sum of a Finite Geometric Series:**
+
+For a finite geometric series with $n$ terms, the sum $S_n$ is given by:
+
+$S_n = a \frac{1 - r^n}{1 - r} \quad \text{for} \quad r \neq 1$
+
+**Sum of an Infinite Geometric Series:**
+
+For an infinite geometric series where $|r| < 1$ for convergence, the sum is:
+
+$S_{\infty} = \frac{a}{1 - r} \quad \text{for} \quad |r| < 1$
+
+The sum of an infinite geometric series is given by:
+
+$S = \frac{a}{1 - r}$
