@@ -46,5 +46,12 @@ def compute_tv():
     ax2.bar(np.array(xt)+width/2, ydct2, width, label="10%", alpha=0.9)
     ax2.legend()
 
-    # fig.savefig("tv.png")
+    fig.savefig("tv.png")
     plt.show()
+
+def main():
+    compute_tv()
+
+if __name__ == "__main__":
+    main()
+
