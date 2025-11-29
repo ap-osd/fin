@@ -1,87 +1,20 @@
 
 # Terminal Value
-## Using Discounted Cash Flow (DCF)
 
-**Present Value of Perpetuity**
+$\text{TV} = CF_n \times \frac{1 + g}{r -g}$
 
-For an infinite series of constant cash flows:
+Assuming:  
 
-$\text{DCF} = \sum_{t=1}^{\infty} \frac{CF}{(1 + r)^t}$
+$g = 0$, zero growth rate  
+$CF_n = 1$, unit cashflow
 
-Since CF is constant, we can factor it out of the summation:
-
-$\text{DCF} = CF \times \sum_{t=1}^{\infty} \frac{1}{(1 + r)^t}$
-
-**Substituting the terms for the DCF as a generic geometric series:**    
-This is a geometric series (see Appendix A) with the first term $\frac{1}{1 + r}$ and common ratio $\frac{1}{1 + r}$ .
-
-$\text{DCF}_{\infty} = CF \times \frac{\frac{1}{1 + r}}{1 - \frac{1}{1 + r}}$
-
-**Simplify the denominator:**
-
-$1 - \frac{1}{1 + r} = \frac{r}{1 + r}$
-
-**Now the DCF expression becomes:**
-
-$\text{DCF}_{\infty} = CF \times \frac{\frac{1}{1 + r}}{\frac{r}{1 + r}} = CF \times \frac{1}{r}$
-
-Thus, the DCF for an infinite series of constant cash flows (or Present Value of Perpetuity) simplifies to:
-
-$`\text{DCF}_{\infty} = \text{PV}_{\infty} = CF \times \frac{1}{r}`$
-
-Assuming FCF=1.  
-Then:
-
-$`\boxed{\text{DCF}_{\infty} = \text{PV}_{\infty} = \frac{1}{r}}`$
-
-## Using Perpetuity Growth Model (Gordon Growth Model)
-
-$`\text{TV}_{\infty} = \frac{CF_{n} \times (1 + g)}{r - g}`$
-
-Where:  
- $CF_n$ = Cash Flow in the final forecasted year (e.g., Year n)  
- $g$ = Perpetuity growth rate (the rate at which cash flows will grow forever)  
- $r$ = Discount rate
-
-Assumimg  
- $g=0$ ; zero percent growth  
- $CF_n = 1$ ; unit FCF
- 
 Then:  
-$\text{TV}_{\infty} = \frac{1 \times (1 + 0)}{r - 0}$
 
-$\boxed{\text{TV}_{\infty} = \frac{1}{r}}$
+$\text{TV} = \frac{1}{r}$
 
 ## Example
-For $5$% discount rate, $r=0.05$, $`\text{TV}_{\infty} = \frac{1}{0.05} \Rightarrow \boxed{\text{TV}_{\infty} = 20}`$
+For $5$% discount rate, $r=0.05$, $`\text{TV} = \frac{1}{0.05} \Rightarrow \boxed{\text{TV} = 20}`$
 
-For $10$% discount rate, $r=0.1$, $`\text{TV}_{\infty} = \frac{1}{0.1} \Rightarrow \boxed{\text{TV}_{\infty} = 10}`$
+For $10$% discount rate, $r=0.1$, $`\text{TV} = \frac{1}{0.1} \Rightarrow \boxed{\text{TV} = 10}`$
 
 ![TV](tv.png "Terminal Value")
-
-# Appendix A
-## Geometric Series
-**Basis of generic geometric series:**
-
-$S = a + ar + ar^2 + ar^3 + \cdots + ar^{n-1}$
-
-Where:
-$a$ is the first term,
-$r$ is the common ratio,
-$n$ is the number of terms.
-
-**Sum of a Finite Geometric Series:**
-
-For a finite geometric series with $n$ terms, the sum $S_n$ is given by:
-
-$S_n = a \frac{1 - r^n}{1 - r} \quad \text{for} \quad r \neq 1$
-
-**Sum of an Infinite Geometric Series:**
-
-For an infinite geometric series where $|r| < 1$ for convergence, the sum is:
-
-$S_{\infty} = \frac{a}{1 - r} \quad \text{for} \quad |r| < 1$
-
-The sum of an infinite geometric series is given by:
-
-$S = \frac{a}{1 - r}$

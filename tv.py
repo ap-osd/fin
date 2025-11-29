@@ -14,7 +14,7 @@ def compute_tv():
     ydct1 = []; ydct2 = []         # y value of dct
     ytvt1 = []; ytvt2 = []         # y value of tvt
 
-    for t in range(1, n):
+    for t in range(1, n+1):
         xt.append(t)
         dct1 = dct1 * (1+g)/(1+r1)
         tvt1 += dct1
@@ -38,13 +38,20 @@ def compute_tv():
     ax1.plot(xt, ytvt2, label="10%")
     ax1.legend()
 
-    width = 0.4
+    bw = 0.4  # bar width
     ax2.set(xlabel='Years', ylabel='Contribution', title='')
     ax2.grid()
     ax2.set_xlim(0, n)
-    ax2.bar(np.array(xt)-width/2, ydct1, width, label="5%", alpha=0.9)
-    ax2.bar(np.array(xt)+width/2, ydct2, width, label="10%", alpha=0.9)
+    ax2.bar(np.array(xt)-bw/2, ydct1, bw, label="5%", alpha=0.9)
+    ax2.bar(np.array(xt)+bw/2, ydct2, bw, label="10%", alpha=0.9)
     ax2.legend()
 
-    # fig.savefig("tv.png")
+    fig.savefig("tv.png")
     plt.show()
+
+def main():
+    compute_tv()
+
+if __name__ == "__main__":
+    main()
+
