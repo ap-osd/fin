@@ -31,6 +31,13 @@ $\Phi(x)$ = standard normal CDF (Cumulative Distribution Function)
 
 $\boxed{C = \Phi(d1) \cdot S_t - \Phi(d2) \cdot e^{-rt} \cdot K}$
 
+ **Interpretation**
+
+* $\Phi(d1)$ reflects the risk-neutral expected value factor for receiving the stock above the strike (hedge ratio).
+* $\Phi(d2)$ gives the risk-neutral probability that a call option finishes in-the-money ($S_T$ > K at expiration).
+
+> Note: Option $\Delta=\Phi(d1)$
+
 **Expiration**
 
 $C = S_T - K$
@@ -99,25 +106,21 @@ ATM when $S_T = K$, $\ln\left(\frac{S_T}{K}\right) = 0$
 
 OTM when $S_T < K$, $\ln\left(\frac{S_T}{K}\right) < 0$, $\text{as}\quad S_T \to 0 \quad \ln\left(\frac{S_T}{K}\right) \to -\infty$
 
- **Interpretation**
-
-* $\Phi(d1)$ equals the option's delta, measuring sensitivity to the underlying price, and reflects the risk-neutral expected value factor for receiving the stock above the strike (hedge ratio).  
-* $\Phi(d2)$ gives the risk-neutral probability that a call option finishes in-the-money ($S_T$ > K at expiration).
-
 ## Put
 
 Using Put-Call parity
 
 $\boxed{P = \Phi(-d2) \cdot K \cdot e^{-rt} - \Phi(-d1) \cdot S_t}$
 
-## Appendix A - Historical Volatility
-Given daily stock prices  
-$S_1, S_2, S_3, \cdots S_n$ 
+## Appendix A - Log Returns
+
+$\log_e(x)=r$   
+$x=e^r$
 
 Log returns  
-$r_i = \ln(\frac{S_i}{S_{i-1}})$   
-$\mu$ = drift  
-$\sigma$ = volatility
+$r_i = \ln(\frac{S_i}{K})$   
+$\mu$ = mean  
+$\sigma$ = standard deviation
 
 Scale time factor  
 $h = T/n$  
@@ -125,11 +128,22 @@ where:
 $T$ = total time  
 $n$ = time period
 
-Scaled drift  
+Scaled mean  
 $\mu_T = \mu \cdot h$
 
-Scaled volatility  
+Scaled standard deviation  
 $\sigma_T = \sigma \cdot \sqrt{h}$
+
+![Log returns](lr.png "Log Returns")
+
+## Appendix B - Historical Volatility
+Given daily stock prices  
+$S_1, S_2, S_3, \cdots S_n$ 
+
+Log returns  
+$r_i = \ln(\frac{S_i}{S_{i-1}})$   
+$\mu$ = drift  
+$\sigma$ = volatility
 
 Volatility annualized, where _number of trading days_ = 252    
 $\sigma_{annual} = \sigma \sqrt{252}$
