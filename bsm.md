@@ -96,7 +96,7 @@ d_2 = d_1 - \sigma$
 
 **Volatility effect**
 
-$\sigma \to 0 \Rightarrow d1,d2 \to \pm \infty \Rightarrow \Phi(d) \in \{0,1\}$, implies it only depends on $\ln\left(\frac{S_t}{K}\right)$.
+$\sigma \to 0 \Rightarrow d1,d2 \to \pm \infty \Rightarrow \Phi(d) \in \lbrace 0,1 \rbrace$, implies it only depends on $\ln\left(\frac{S_t}{K}\right)$.
 
 $\sigma \to \infty \Rightarrow d1,d2 \to 0 \Rightarrow \Phi(d)=0.5$, implies equal probability.
 
@@ -156,7 +156,23 @@ $\sigma_{annual} = \sigma \sqrt{252}$
 
 ![HV](hv.png "Historical Volatility")
 
-## Appendix C  - Put-Call Parity
+## Appendix C  - Implied Volatility
+
+* Market price
+  * Market price will almost never match the BSM Price using HV.
+  * The difference between market price and BSM price is "absorbed by" or "attributed to" the IV.
+  * IV is the "garbage bin" of the BSM model.
+* HV and IV
+  * IV < HV, Market Price < BSM Price, the option is "cheap".
+  * IV > HV, Market Price > BSM Price, the option is "expensive".
+* Volatility Smile - Implied Volatility is higher for both OTM call and put options compared to ATM options, and equal for call and put.
+* Volatility Skew - Implied Volatility is higher for both OTM call and put options compared to ATM options, but vary for call and put.
+  * Positve/Forward Skew -  OTM call options have a higher implied volatility than OTM put options.
+  * Negative/Reverse Skew -  OTM put options have a higher implied volatility than OTM call options (common in stocks).
+* De-annualize volatility - rule of 16 by approximating _number of trading days_ = 256.
+  * $\sigma_{daily} = \frac{\sigma_{annual}}{\sqrt{T}} = \frac{\sigma_{annual}}{16}$
+
+## Appendix D  - Put-Call Parity
 Assumption:  
 If this equation holds, the options market is in equilibrium, with no arbitrage prospects available.
 
