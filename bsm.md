@@ -38,6 +38,8 @@ $\boxed{C = \Phi(d1) \cdot S_t - \Phi(d2) \cdot e^{-rt} \cdot K}$
 
 > Note: Option $\Delta=\Phi(d1)$
 
+![Phi(d) Call](phi-call.png "Phi(d) Call")
+
 **Expiration**
 
 $C = S_T - K$
@@ -111,6 +113,8 @@ OTM when $S_T < K$, $\ln\left(\frac{S_T}{K}\right) < 0$, $\text{as}\quad S_T \to
 Using Put-Call parity
 
 $\boxed{P = \Phi(-d2) \cdot K \cdot e^{-rt} - \Phi(-d1) \cdot S_t}$
+
+![Phi(d) Put](phi-put.png "Phi(d) Put")
 
 ## Appendix A - Log Returns
 
