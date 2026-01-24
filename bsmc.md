@@ -22,3 +22,13 @@ Put
 |:---:|:---:|:---:|
 | ![bsm-S80-K100-V50](bsm-S80-K100-V50.png) | ![bsm-S100-K100-V20](bsm-S100-K100-V50.png) | ![bsm-S100-K100-V20](bsm-S120-K100-V50.png) |
 
+## Price change over time with $S$, $K$, $r$, $\sigma$ changes
+
+| $S_{var}$ |  $K_{var}$ |
+|:---:|:---:|
+| ![bsm-Svar-K100-r5-V50](bsm-Svar-K100-r5-V50.png) | ![bsm-S100-Kvar-r5-V50](bsm-S100-Kvar-r5-V50.png) |
+
+| $r_{var}$ | $\sigma_{var}$ |
+|:---:|:---:|
+| ![bsm-S100-K100-rvar-V50](bsm-S100-K100-rvar-V50.png) | ![bsm-S100-K100-r5-Vvar](bsm-S100-K100-r5-Vvar.png) |
+
