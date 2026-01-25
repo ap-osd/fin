@@ -36,3 +36,7 @@ Put
 |:---:|:---:|
 | ![bsm-S100-K100-rvar-V50](bsm-S100-K100-rvar-V50.png) | ![bsm-S100-K100-r5-Vvar](bsm-S100-K100-r5-Vvar.png) |
 
+## OTM Puts
+
+![bsm-p-Svar-K100-r4-V50](bsm-p-Svar-K100-r4-V50.png)
+
