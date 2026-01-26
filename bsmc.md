@@ -22,6 +22,10 @@ Put
 |:---:|:---:|:---:|
 | ![bsm-S80-K100-V50](bsm-S80-K100-V50.png) | ![bsm-S100-K100-V20](bsm-S100-K100-V50.png) | ![bsm-S100-K100-V20](bsm-S120-K100-V50.png) |
 
+## Price sensitivity to volatility
+
+![bsm-S100-K100-r5-t1](bsm-S100-K100-r5-t1.png)
+
 ## Price change over time with $S$, $K$, $r$, $\sigma$ changes
 
 | $S_{var}$ |  $K_{var}$ |
